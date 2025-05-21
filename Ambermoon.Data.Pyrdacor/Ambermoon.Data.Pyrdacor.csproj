@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
 	<LangVersion>12</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
@@ -9,6 +9,10 @@
     <Configurations>Debug;Release;DebugAndroid;DebugES;ReleaseES</Configurations>
     <Version>10.9.4</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PYC.Compression" Version="1.0.1" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Ambermoon.Data.Legacy\Ambermoon.Data.Legacy.csproj" />

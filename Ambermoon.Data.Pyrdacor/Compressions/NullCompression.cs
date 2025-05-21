@@ -1,19 +1,18 @@
 ﻿using Ambermoon.Data.Serialization;
 
-namespace Ambermoon.Data.Pyrdacor.Compressions
+namespace Ambermoon.Data.Pyrdacor.Compressions;
+
+internal class NullCompression : ICompression<NullCompression>, ICompression
 {
-    internal class NullCompression : ICompression
+    public static ushort Identifier => 0x0000;
+
+    public IDataReader Decompress(IDataReader dataReader)
     {
-        public ushort Identifier => 0x0000;
+        return dataReader;
+    }
 
-        public IDataReader Decompress(IDataReader dataReader)
-        {
-            return dataReader;
-        }
-
-        public IDataWriter Compress(IDataWriter dataWriter)
-        {
-            return dataWriter;
-        }
+    public IDataWriter Compress(IDataWriter dataWriter)
+    {
+        return dataWriter;
     }
 }
